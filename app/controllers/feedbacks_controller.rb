@@ -2,7 +2,7 @@ class FeedbacksController < ApplicationController
   require 'open-uri'
 
   def index
-    flash[:success] = 'Message Sent! Many thanks, all feedback is valuable to us!'
+    #flash[:success] = 'Message Sent! Many thanks, all feedback is valuable to us!'
     @feedback = Feedback.new
   end
 

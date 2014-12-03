@@ -1,39 +1,48 @@
-
 <script src='https://www.google.com/recaptcha/api.js'></script>
 <%= form_for(@feedback) do |f| %>
-    <% if @feedback.errors.any? %>
-        <div id="error_explanation">
-          <h2><%= pluralize(@feedback.errors.count, "error") %> prohibited this feedback from being sent:</h2>
+    <div class="root">
+      <% if @feedback.errors.any? %>
+          <div id="error_explanation">
+            <h2><%= pluralize(@feedback.errors.count, "error") %> prohibited this feedback from being sent:</h2>
 
-          <ul>
-            <% @feedback.errors.full_messages.each do |message| %>
-                <li><%= message %></li>
-            <% end %>
-          </ul>
+            <ul>
+              <% @feedback.errors.full_messages.each do |message| %>
+                  <li><%= message %></li>
+              <% end %>
+            </ul>
+          </div>
+      <% end %>
+
+      <div class="topbar">
+        <div class="right">
+          <div id="respond" class="comment-respond">
+            <p class="comment-form-email">
+              <label for="email">CC</label>
+              <%= f.text_field :cc %>
+            </p>
+
+            <p class="comment-form-email">
+              <label for="url">Subject</label>
+              <%= f.text_field :subject %>
+            </p>
+          </div>
+
         </div>
-    <% end %>
 
-    <div class="field">
-      <%= f.label :cc %>
-      <br>
-      <%= f.text_field :cc %>
+      </div>
+      <div class="content">
+        <div class="field">
+          <%= f.cktext_area :msg, :ckeditor => {:uiColor => '#AADC6E', :toolbar => 'mini'} %>
+        </div>
+        <!-- hthngoc - captcha -->
+        <div class="g-recaptcha" data-sitekey="6LcAov4SAAAAAOZUFqgRvni2UMKgYLExxLH_kpoR">
+        </div>
+        <!-- end hthngoc -->
+      </div>
+      <div class="button-submit">
+        <%= f.submit %>
+      </div>
+      <%= render 'shared/flash_messages' %>
     </div>
-    <div class="field">
-      <%= f.label :subject %>
-      <br>
-      <%= f.text_field :subject %>
-    </div>
-    <div class="field">
-      <%= f.label :msg %>
-      <br>
-      <%= f.cktext_area :msg, :ckeditor => {:uiColor => '#AADC6E', :toolbar => 'mini'} %>
-    </div>
-    <!-- hthngoc - captcha -->
-    <div class="g-recaptcha" data-sitekey="6LcAov4SAAAAAOZUFqgRvni2UMKgYLExxLH_kpoR">
-    </div>
-    <!-- end hthngoc -->
-    <div class="actions">
-      <%= f.submit %>
-    </div>
-    <%= render 'shared/flash_messages' %>
+
 <% end %>
