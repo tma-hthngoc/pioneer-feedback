@@ -1,0 +1,38 @@
+<script src='https://www.google.com/recaptcha/api.js'></script>
+
+<%= form_for(@feedback) do |f| %>
+    <% if @feedback.errors.any? %>
+        <div id="error_explanation">
+          <h2><%= pluralize(@feedback.errors.count, "error") %> prohibited this feedback from being sent:</h2>
+
+          <ul>
+            <% @feedback.errors.full_messages.each do |message| %>
+                <li><%= message %></li>
+            <% end %>
+          </ul>
+        </div>
+    <% end %>
+
+    <div class="field">
+      <%= f.label :cc %>
+      <br>
+      <%= f.text_field :cc %>
+    </div>
+    <div class="field">
+      <%= f.label :subject %>
+      <br>
+      <%= f.text_field :subject %>
+    </div>
+    <div class="field">
+      <%= f.label :msg %>
+      <br>
+      <%= f.cktext_area :msg, :ckeditor => {:uiColor => '#AADC6E', :toolbar => 'mini'} %>
+    </div>
+    <div>
+      <div       class="g-recaptcha"       data-sitekey="6LcAov4SAAAAAOZUFqgRvni2UMKgYLExxLH_kpoR"></div>
+    </div>
+    <div class="actions">
+      <%= f.submit %>
+    </div>
+    <%= render 'shared/flash_messages' %>
+<% end %>
