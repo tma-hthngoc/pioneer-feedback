@@ -5,8 +5,9 @@ class Feedback
 
   attr_accessor :subject, :cc, :msg
 
-  validates :subject, :cc, :msg, :presence => true
-  validates_format_of :cc, :with => /(?>(?:[0-9a-zA-Z][-\w]*[0-9a-zA-Z]\.)+)[a-zA-Z]{2,9}/
+  validates :subject, :msg, :presence => true
+  #validates :cc, :presence => true, :allow_blank => true
+  validates_format_of :cc, :with => /(?>(?:[0-9a-zA-Z][-\w]*[0-9a-zA-Z]\.)+)[a-zA-Z]{2,9}/, :allow_blank => true
   validates_length_of :msg, :maximum => 500
 
   def initialize(attributes = {})
