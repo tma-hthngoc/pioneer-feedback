@@ -34,7 +34,6 @@ class FeedbacksController < ApplicationController
     else
       flash[:error] = "Oh! It's error with CAPTCHA! Are you a human?"
       render :action => 'new'
-      return
     end
   end
 
