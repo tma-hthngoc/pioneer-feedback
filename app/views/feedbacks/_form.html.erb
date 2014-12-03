@@ -15,14 +15,15 @@
 
       <div class="topbar">
         <div class="right">
-          <div id="respond" class="comment-respond">
+           <div id="respond" class="comment-respond">
+            <!-- hthngoc - align left -->
             <p class="comment-form-email">
-              <span style="float: left"><label for="email">Cc</label></span>
+              <label for="email" style="margin:0 20px 0px -30px">From</label>
               <%= f.text_field :cc %>
             </p>
 
             <p class="comment-form-email">
-              <span style="float: left"><label for="url">Subject</label></span>
+              <label for="url" style="margin:0 10px 0px -20px">Subject</label>
               <%= f.text_field :subject %>
             </p>
           </div>
