@@ -40,3 +40,8 @@ gem 'spring',        group: :development
 #gem 'simple_captcha', :git => 'git://github.com/galetahub/simple-captcha.git'
 
 #gem "recaptcha", :require => "recaptcha/rails"
+
+group :production do
+  gem 'rails_12factor'
+end
+ 
