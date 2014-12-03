@@ -17,7 +17,7 @@
         <div class="right">
           <div id="respond" class="comment-respond">
             <p class="comment-form-email">
-              <label for="email">CC</label>
+              <label for="email">From</label>
               <%= f.text_field :cc %>
             </p>
 
@@ -34,11 +34,12 @@
         <div class="field">
           <%= f.cktext_area :msg, :ckeditor => {:uiColor => '#323F8D', :toolbar => 'mini'} %>
         </div>
-        <!-- hthngoc - captcha -->
-        <div class="g-recaptcha" data-sitekey="6LcAov4SAAAAAOZUFqgRvni2UMKgYLExxLH_kpoR">
-        </div>
-        <!-- end hthngoc -->
+
       </div>
+      <!-- hthngoc - captcha -->
+      <div class="g-recaptcha" data-sitekey="6LcAov4SAAAAAOZUFqgRvni2UMKgYLExxLH_kpoR">
+      </div>
+      <!-- end hthngoc -->
       <div class="button-submit">
         <%= f.submit %>
       </div>
