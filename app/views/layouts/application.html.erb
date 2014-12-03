@@ -9,11 +9,12 @@
 <body>
 
 <div id='header'>
-  <%= image_tag 'wallemlogo.gif' , class: 'logo'%>
-  <div id='innovate'>
+  <div style="float: left"><%= image_tag 'wallemlogo.gif', :class => 'logo'%>
+  </div>
+  <div style="float: right" id='innovate'>
     <%= image_tag 'innovation.png' %>
   </div>
-  <div class="separate"></div>
+  <div style="clear: both" class="separate"></div>
 </div>
 
 <%= yield %>

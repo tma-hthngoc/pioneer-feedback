@@ -102,9 +102,9 @@ h2 {
     #innovate {
         border: 0 none !important;
         display: block;
-        position: absolute;
-        top: 9px;
-        left: 700px;
+        /*position: absolute;*/
+        /*top: 9px;*/
+        /*left: 700px;*/
     }
     #innovate img {
         height:50px;
