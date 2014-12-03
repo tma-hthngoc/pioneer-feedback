@@ -25,7 +25,7 @@ class FeedbacksController < ApplicationController
           flash[:success] = 'Message Sent! Many thanks, all feedback is valuable to us!'
         rescue => ex
           puts ex
-          flash[:error] = 'There is some error. Sorry for this inconvenience.'
+          flash[:error] = "There is some error. Sorry for this inconvenience."
         end
         redirect_to root_url
       else
