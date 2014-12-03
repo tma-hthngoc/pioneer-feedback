@@ -1,5 +1,5 @@
-<script src='https://www.google.com/recaptcha/api.js'></script>
 
+<script src='https://www.google.com/recaptcha/api.js'></script>
 <%= form_for(@feedback) do |f| %>
     <% if @feedback.errors.any? %>
         <div id="error_explanation">
@@ -28,9 +28,10 @@
       <br>
       <%= f.cktext_area :msg, :ckeditor => {:uiColor => '#AADC6E', :toolbar => 'mini'} %>
     </div>
-    <div>
-      <div       class="g-recaptcha"       data-sitekey="6LcAov4SAAAAAOZUFqgRvni2UMKgYLExxLH_kpoR"></div>
+    <!-- hthngoc - captcha -->
+    <div class="g-recaptcha" data-sitekey="6LcAov4SAAAAAOZUFqgRvni2UMKgYLExxLH_kpoR">
     </div>
+    <!-- end hthngoc -->
     <div class="actions">
       <%= f.submit %>
     </div>
