@@ -45,7 +45,7 @@ h2 {
     font-size:12px;
     padding:2px 2px;
     border:solid 1px #aacfe4;   
-    margin:2px 0 4px 2px;
+    margin:2px 1px;
   }
   #message {
     width: 90%; 
@@ -78,13 +78,13 @@ h2 {
 
 .field_with_errors {
   padding: 2px;
-  border: 2px solid red;
+  border: 1px solid red;
   display: table;
 }
 
 #error_explanation {
   width: 450px;
-  border: 2px solid red;
+  border: 1px solid red;
   padding: 7px;
   padding-bottom: 0;
   margin-bottom: 20px;
