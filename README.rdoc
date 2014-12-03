@@ -1,28 +1,18 @@
 == README
+Obtain feedback, whether anonymous or not around pioneer. Specifically we
+want concerns, opinions and to encourage all staff, no matter how shy, to
+easily submit ideas for improvements and to actively participate in the
+future of Wallem.
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
 
+The form responds quickly, looks friendly and intuitive to use, successfully
+reliably emails into ****@wallem.com
 Things you may want to cover:
 
-* Ruby version
+* Send Mail
 
-* System dependencies
+* Captcha
 
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
+* UX
 
 * ...
-
-
-Please feel free to use a different markup language if you do not plan to run
-<tt>rake doc:app</tt>.
