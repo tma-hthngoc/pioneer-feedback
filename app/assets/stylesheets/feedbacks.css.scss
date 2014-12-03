@@ -147,13 +147,13 @@ div.content {
 }
 
 .button-submit input[type="submit"] {
-  border-top: 1px solid #6efab6;
-  background: #82d9af;
-  background: -webkit-gradient(linear, left top, left bottom, from(#78b077), to(#82d9af));
-  background: -webkit-linear-gradient(top, #78b077, #82d9af);
-  background: -moz-linear-gradient(top, #78b077, #82d9af);
-  background: -ms-linear-gradient(top, #78b077, #82d9af);
-  background: -o-linear-gradient(top, #78b077, #82d9af);
+  border-top: 1px solid #827FB0;
+  background: #323F8D;
+  background: -webkit-gradient(linear, left top, left bottom, from(#827FB0), to(#323F8D));
+  background: -webkit-linear-gradient(top, #827FB0, #323F8D);
+  background: -moz-linear-gradient(top, #827FB0, #323F8D);
+  background: -ms-linear-gradient(top, #827FB0, #323F8D);
+  background: -o-linear-gradient(top, #827FB0, #323F8D);
   padding: 10px 20px;
   -webkit-border-radius: 6px;
   -moz-border-radius: 6px;
@@ -168,13 +168,13 @@ div.content {
 }
 
 .button-submit input[type="submit"]:hover {
-  border-top-color: #68d986;
-  background: #68d986;
+  border-top-color: #5769F0;
+  background: #4654BF;
 }
 
 .button-submit input[type="submit"]:active {
-  border-top-color: #1b435e;
-  background: #1b435e;
+  border-top-color: #221F5F;
+  background: #221F5F;
 }
 
 #header {
