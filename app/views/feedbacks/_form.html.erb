@@ -1,9 +1,11 @@
 <script style="text/javascript" src='https://www.google.com/recaptcha/api.js'></script>
 <%= render 'shared/flash_messages' %>
 <%= form_for(@feedback) do |f| %>
-    <div class="root">
+<table style="border: none;" cellspacing="5px">
+  <tr>
+    <td colspan="2">
       <% if @feedback.errors.any? %>
-          <div id="error_explanation">
+          <div id="error_explanation" style="margin-left: 10px">
             <h2><%= pluralize(@feedback.errors.count, "error") %> prohibited this feedback from being sent:</h2>
 
             <ul>
@@ -13,37 +15,49 @@
             </ul>
           </div>
       <% end %>
+    </td>
+  </tr>
+  <tr>
+    <td>
+      From
+    </td>
+    <td>
+      <%= f.text_field :cc, :style =>'width:890px' %>
+    </td>
+  </tr>
 
-      <div class="topbar">
-        <div class="right">
-          <div id="respond" class="comment-respond">
-            <!-- hthngoc - align left -->
-            <p class="comment-form-email">
-              <label for="email">From</label>
-              <%= f.text_field :cc %>
-            </p>
+  <tr>
+    <td>
+      Subject
+    </td>
+    <td>
+      <%= f.text_field :subject, :style =>'width:890px' %>
 
-            <p class="comment-form-email">
-              <label for="url">Subject</label>
-              <%= f.text_field :subject %>
-            </p>
-          </div>
-        </div>
-      </div>
+    </td>
+  </tr>
 
-      <div class="content">
-        <div class="field">
-          <%= f.cktext_area :msg, :ckeditor => {:uiColor => '#323F8D', :toolbar => 'mini'} %>
-        </div>
-      </div>
-      <!-- hthngoc - captcha -->
+  <tr>
+    <td colspan="2"  style="margin-top:10px">
+      <br />
+      <%= f.cktext_area :msg, :ckeditor => {:uiColor => '#323F8D', :toolbar => 'mini'} %>
+
+    </td>
+  </tr>
+
+  <tr>
+    <td colspan="2">
       <div class="g-recaptcha" data-sitekey="6LcAov4SAAAAAOZUFqgRvni2UMKgYLExxLH_kpoR">
       </div>
-      <!-- end hthngoc -->
+    </td>
+  </tr>
+
+  <tr>
+    <td colspan="2">
       <div class="button-submit">
         <%= f.submit %>
       </div>
+    </td>
+  </tr>
 
-    </div>
-
+</table>
 <% end %>
