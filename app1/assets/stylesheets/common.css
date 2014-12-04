@@ -75,6 +75,22 @@ h2 {
     font-style: italic;
 }
 
+
+.field_with_errors {
+  padding: 2px;
+  border: 1px solid red;
+  display: table;
+}
+
+#error_explanation {
+  width: 450px;
+  border: 1px solid red;
+  padding: 7px;
+  padding-bottom: 0;
+  margin-bottom: 20px;
+  background-color: #f0f0f0;
+}
+
 .status-line {
     vertical-align: middle;
     margin-top: 0px; 
@@ -120,4 +136,3 @@ h2 {
     padding: 0;
     border: 0;
 }
-

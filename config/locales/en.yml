@@ -19,5 +19,19 @@
 # To learn more, please read the Rails Internationalization guide
 # available at http://guides.rubyonrails.org/i18n.html.
 
+#en:
+#  hello: "Hello world"
+
 en:
-  hello: "Hello world"
+#  activerecord:
+#    models:
+#      feedback: "Feedback"
+#    attributes:
+#      feedback:
+#        msg: "Feedback's content"
+#    errors:
+#      models:
+#        feedback:
+#          attributes:
+#            msg:
+#              blank: "cannot be empty"

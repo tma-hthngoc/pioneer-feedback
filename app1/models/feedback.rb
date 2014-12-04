@@ -5,17 +5,14 @@ class Feedback
 
   attr_accessor :subject, :from, :msg
 
-  validates :subject, :msg, :presence => true
+  #validates :subject, :presence => true
+  #validates :msg, :presence => true
   #validates_format_of :from, :with => /(?>(?:[0-9a-zA-Z][-\w]*[0-9a-zA-Z]\.)+)[a-zA-Z]{2,9}/, :allow_blank => true
   validates_length_of :msg, :maximum => 500
 
-  HUMANIZED_ATTRIBUTES = {
-      :subject => "'Subject' field",
-      :msg => "Feedback's content",
-  }
-
-  def self.human_attribute_name(attr, options={})
-    HUMANIZED_ATTRIBUTES[attr.to_sym] || super
+  validate do |feedback|
+    feedback.errors.add(:base, "Subject can't be blank") if feedback.subject.blank?
+    feedback.errors.add(:base, "Feedback's content can't be blank") if feedback.msg.blank?
   end
 
   def initialize(attributes = {})

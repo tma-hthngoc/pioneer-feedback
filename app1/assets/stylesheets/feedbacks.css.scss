@@ -87,14 +87,13 @@ a {
   margin: 8px;
 }
 
-// #respond not exist anymore
 #respond {
   p {
     clear: both;
     line-height: 40px;
     margin: 5px 0;
     input[type="text"] {
-      width: 875px;
+      width: 867px;
       float: left;
     }
   }
@@ -106,22 +105,10 @@ a {
     text-shadow: 1px 1px 1px #fff;
     text-align: left;
   }
-}
-
-.field_with_errors {
-  padding: 0;
-  display: table;
-  border: 2px solid red;
-  margin-left: -5px;
-  input[type="text"] {
-    width: 872px;
-    background-color: #f2dede;
-  }
-  textarea {
-    background-color: #f2dede;
-  }
-  .cke_1.cke_chrome {
-    width: 940px;
+  div.field_with_errors {
+    input[type="text"] {
+      width: 800px;
+    }
   }
 }
 
@@ -129,47 +116,20 @@ a {
   float: left;
 }
 
-/*table*/
-
-.c-left {
-  width: 100px;
-  text-align: left;
-}
-
-table {
-  border: none;
-  margin-top: 10px;
-}
-
-table tr td input[type=text] {
-  width: 870px;
-}
-
 /*input*/
-input, textarea {
-  border: 1px solid #afafaf;
-  background: #fff;
-  color: #333;
+input[type="text"] {
+  border: 1px solid #d2dadd;
+  -moz-box-shadow: 0 1px 1px #f3f4f6 inset;
+  -webkit-box-shadow: 0 1px 1px #f3f4f6 inset;
+  box-shadow: 0 1px 1px #f3f4f6 inset;
+  font-size: 13px;
+  color: #3a3a3a;
   padding: 8px 7px;
-}
-
-textarea {
-  font-family: inherit;
-}
-
-input:hover, textarea:hover {
-  border: 1px solid #8b8b8b;
-  -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.15);
-  -moz-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.15);
-  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.15);
-}
-
-input:focus, textarea:focus {
-  outline: none;
-  border: 1px solid #24a3cd;
-  -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.15);
-  -moz-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.15);
-  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.15);
+  -moz-border-radius: 3px;
+  -webkit-border-radius: 3px;
+  border-radius: 3px 3px 3px 3px;
+  outline-color: #e2eaed;
+  background: #f8f8f8;
 }
 
 div.content {
