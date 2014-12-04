@@ -23,7 +23,7 @@ class FeedbacksController < ApplicationController
     p '-----2. captcha & respone'
     p captcha
     p response_m
-    if true #response_m['true']
+    if response_m['true']
       p '-----3. captcha is valid'
       if @feedback.valid?
         p '-----4. sending email'
