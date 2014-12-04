@@ -1,4 +1,5 @@
-<script src='https://www.google.com/recaptcha/api.js'></script>
+<script style="text/javascript" src='https://www.google.com/recaptcha/api.js'></script>
+<%= render 'shared/flash_messages' %>
 <%= form_for(@feedback) do |f| %>
     <div class="root">
       <% if @feedback.errors.any? %>
@@ -17,12 +18,12 @@
         <div class="right">
           <div id="respond" class="comment-respond">
             <p class="comment-form-email">
-              <span style="float: left"><label for="email">Cc</label></span>
+              <label for="email">From</label>
               <%= f.text_field :cc %>
             </p>
 
             <p class="comment-form-email">
-              <span style="float: left"><label for="url">Subject</label></span>
+              <label for="url">Subject</label>
               <%= f.text_field :subject %>
             </p>
           </div>
@@ -41,7 +42,7 @@
       <div class="button-submit">
         <%= f.submit %>
       </div>
-      <%= render 'shared/flash_messages' %>
+
     </div>
 
 <% end %>
