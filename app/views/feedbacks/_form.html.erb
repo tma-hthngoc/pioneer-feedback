@@ -1,61 +1,38 @@
 <script style="text/javascript" src='https://www.google.com/recaptcha/api.js'></script>
+
+<% content_for :head do %>
+    <%= javascript_include_tag 'our-ckeditor' %>
+<% end %>
+
 <%= render 'shared/flash_messages' %>
 <%= form_for(@feedback) do |f| %>
     <div>
-          <% if @feedback.errors.any? %>
-              <div id="error_explanation">
-                <h2><%= pluralize(@feedback.errors.count, "error") %> prohibited this feedback from being sent:</h2>
+      <% if @feedback.errors.any? %>
+          <div id="error_explanation">
+            <h2><%= pluralize(@feedback.errors.count, "error") %> prohibited this feedback from being sent:</h2>
 
-                <ul>
-                  <% @feedback.errors.full_messages.each do |message| %>
-                      <li><%= message %></li>
-                  <% end %>
-                </ul>
-              </div>
-          <% end %>
+            <ul>
+              <% @feedback.errors.full_messages.each do |message| %>
+                  <li><%= message %></li>
+              <% end %>
+            </ul>
+          </div>
+      <% end %>
     </div>
-    <div>
-<table cellspacing="5px">
-      <tr>
-        <td>
-          From
-        </td>
-        <td>
-      <%= f.text_field :from, :title => "Sender options - indicate name or remain anonymous (blank info)" %>
-        </td>
-      </tr>
+    <div class="content">
 
-      <tr>
-        <td>
-          Subject
-        </td>
-        <td>
-      <%= f.text_field :subject%>
-        </td>
-      </tr>
+      <p class="top">Send a copy to me</p>
+      <p><%= f.text_field :from%></p>
 
-      <tr>
-    <td colspan="2">
-          <br/>
-          <%= f.cktext_area :msg, :ckeditor => {:uiColor => '#323F8D', :toolbar => 'mini'} %>
-        </td>
-      </tr>
+      <p class="top">Subject ( <span>*</span> )</p>
+      <p><%= f.text_field :subject%></p>
 
-      <tr>
-        <td colspan="2">
-          <div class="g-recaptcha" data-sitekey="6LcAov4SAAAAAOZUFqgRvni2UMKgYLExxLH_kpoR">
-          </div>
-        </td>
-      </tr>
+      <p class="top">Message ( <span>*</span> )</p>
+      <p><%= f.cktext_area :msg, :ckeditor => {:uiColor => '#323F8D', :toolbar => 'mini'} %></p>
 
-      <tr>
-        <td colspan="2">
-          <div class="button-submit">
-            <%= f.submit %>
-          </div>
-        </td>
-      </tr>
+      <p class="top">Anti-spam ( <span>*</span> )</p>
+      <p><div class="g-recaptcha" data-sitekey="6LcAov4SAAAAAOZUFqgRvni2UMKgYLExxLH_kpoR"></div></p>
 
-    </table>
+      <p><div class="button-submit"><%= f.submit %></div></p>
     </div>
 <% end %>
