@@ -25,6 +25,10 @@
   }
 }
 
+.alert-recaptcha_error {
+  display: none;
+}
+
 .alert-success {
   color: #468847;
   background-color: #dff0d8;
@@ -148,14 +152,14 @@ div.content {
     background: -moz-linear-gradient(top, #827FB0, #323F8D);
     background: -ms-linear-gradient(top, #827FB0, #323F8D);
     background: -o-linear-gradient(top, #827FB0, #323F8D);
-    padding: 10px 20px;
+    padding: 8px 10px;
     -webkit-border-radius: 6px;
     -moz-border-radius: 6px;
     border-radius: 6px;
 
     text-shadow: rgba(0, 0, 0, .4) 0 1px 0;
     color: #ffffff;
-    font-size: 16px;
+    font-size: 13px;
     font-family: Helvetica, Arial, Sans-Serif;
     text-decoration: none;
     vertical-align: middle;

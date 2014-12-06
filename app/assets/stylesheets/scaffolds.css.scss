@@ -98,3 +98,11 @@ input:focus, textarea:focus {
   -moz-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.15);
   box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.15);
 }
+
+#recaptcha_area {
+  margin-left: -3px;
+  margin-top: -3px;
+  #recaptcha_table td {
+    line-height: normal;
+  }
+}

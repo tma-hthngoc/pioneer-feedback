@@ -37,9 +37,9 @@ gem 'spring',        group: :development
 # Use debugger
 # gem 'debugger', group: [:development, :test]
 #
-#gem 'simple_captcha', :git => 'git://github.com/galetahub/simple-captcha.git'
+#gem 'simple_captcha2', require: 'simple_captcha'
 
-#gem "recaptcha", :require => "recaptcha/rails"
+gem "recaptcha", :require => "recaptcha/rails"
 
 group :production do
   gem 'rails_12factor'

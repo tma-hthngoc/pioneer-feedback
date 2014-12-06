@@ -30,12 +30,8 @@
 
       <p class="top">Anti-spam ( <span>*</span> )</p>
 
-      <p>
-        <div class="g-recaptcha" data-sitekey="6LcAov4SAAAAAOZUFqgRvni2UMKgYLExxLH_kpoR"></div>
-      </p>
+      <p><%= recaptcha_tags  %></p>
 
-      <p>
-        <div class="button-submit"><%= f.submit %></div>
-      </p>
+      <p class="top"><div class="button-submit"><%= f.submit %></div></p>
     </div>
 <% end %>

@@ -44,11 +44,11 @@ h2 {
   input {
     font-size:12px;
     padding:2px 2px;
-    border:solid 1px #aacfe4;   
+    border:solid 1px #aacfe4;
     margin:2px 1px;
   }
   #message {
-    width: 90%; 
+    width: 90%;
   }
 
 
@@ -77,7 +77,7 @@ h2 {
 
 .status-line {
     vertical-align: middle;
-    margin-top: 0px; 
+    margin-top: 0px;
     margin-bottom: 0px;
     width: 8em;
     text-align: center;

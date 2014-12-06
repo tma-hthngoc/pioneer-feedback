@@ -18,12 +18,7 @@ class UserMailer < ActionMailer::Base
     @subject = fb[:subject]
     @body = fb[:msg]
 
-    if @from && @from.to_s.match(/(?>(?:[0-9a-zA-Z][-\w]*[0-9a-zA-Z]\.)+)[a-zA-Z]{2,9}/)
-      mail(cc: @from,
-           subject: @subject).deliver!
-    else
-      mail(subject: @subject).deliver!
-    end
+    mail(cc: @from, subject: @subject).deliver!
 
   end
 end
