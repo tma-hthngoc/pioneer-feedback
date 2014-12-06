@@ -1,9 +1,5 @@
 <script style="text/javascript" src='https://www.google.com/recaptcha/api.js'></script>
 
-<% content_for :head do %>
-    <%= javascript_include_tag 'our-ckeditor' %>
-<% end %>
-
 <%= render 'shared/flash_messages' %>
 <%= form_for(@feedback) do |f| %>
     <div>
@@ -20,19 +16,26 @@
       <% end %>
     </div>
     <div class="content">
-
       <p class="top">Send a copy to me</p>
-      <p><%= f.text_field :from%></p>
+
+      <p><%= f.text_field :from %></p>
 
       <p class="top">Subject ( <span>*</span> )</p>
-      <p><%= f.text_field :subject%></p>
+
+      <p><%= f.text_field :subject %></p>
 
       <p class="top">Message ( <span>*</span> )</p>
+
       <p><%= f.cktext_area :msg, :ckeditor => {:uiColor => '#323F8D', :toolbar => 'mini'} %></p>
 
       <p class="top">Anti-spam ( <span>*</span> )</p>
-      <p><div class="g-recaptcha" data-sitekey="6LcAov4SAAAAAOZUFqgRvni2UMKgYLExxLH_kpoR"></div></p>
 
-      <p><div class="button-submit"><%= f.submit %></div></p>
+      <p>
+        <div class="g-recaptcha" data-sitekey="6LcAov4SAAAAAOZUFqgRvni2UMKgYLExxLH_kpoR"></div>
+      </p>
+
+      <p>
+        <div class="button-submit"><%= f.submit %></div>
+      </p>
     </div>
 <% end %>
