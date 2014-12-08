@@ -18,17 +18,17 @@
     <div class="content">
       <p class="top">Send a copy to me</p>
 
-      <p><%= f.text_field :from %></p>
+      <p><%= f.text_field :from, :title => 'Please indicate email address' %></p>
 
-      <p class="top">Subject ( <span>*</span> )</p>
+      <p class="top">Subject <span><i>(required)</i></span></p>
 
       <p><%= f.text_field :subject %></p>
 
-      <p class="top">Message ( <span>*</span> )</p>
+      <p class="top">Message <span><i>(required)</i></span></p>
 
       <p><%= f.cktext_area :msg, :ckeditor => {:uiColor => '#323F8D', :toolbar => 'mini'} %></p>
 
-      <p class="top">Anti-spam ( <span>*</span> )</p>
+      <p class="top">Anti-spam <span><i>(required)</i></span></p>
 
       <p><%= recaptcha_tags  %></p>
 

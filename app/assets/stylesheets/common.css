@@ -86,9 +86,7 @@ h2 {
     #innovate {
         border: 0 none !important;
         display: block;
-        /*position: absolute;*/
-        /*top: 9px;*/
-        /*left: 700px;*/
+        padding-top: 10px;
     }
     #innovate img {
         height:50px;

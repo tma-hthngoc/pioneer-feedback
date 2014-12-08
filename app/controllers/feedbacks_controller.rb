@@ -17,7 +17,7 @@ class FeedbacksController < ApplicationController
     p '------1. create new'
     p @feedback
     # hthngoc - Captcha
-    if verify_recaptcha(:model => @feedback, :message => "Oh! It's error with reCAPTCHA! Are you a human?")
+    if verify_recaptcha(:model => @feedback, :message => "Please type verification code again")
       p '-----3. captcha is valid'
       if @feedback.valid?
         p '-----4. sending email'
@@ -35,10 +35,9 @@ class FeedbacksController < ApplicationController
       end
     else
       p '-----5: captcha is not valid, do nothing'
-      #flash[:error] = "Oh! It's error with CAPTCHA! Are you a human?"
+      #flash[:error] = "Please type verification code again"
       render :action => 'new'
     end
   end
-
 
 end

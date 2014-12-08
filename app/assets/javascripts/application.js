@@ -15,3 +15,9 @@
 //= require turbolinks
 //= require ckeditor/init
 //= require_tree .
+
+$(document).ready(function () {
+    if ($(".alert-success").length > 0) {
+        $("#new_feedback").html('');
+    }
+});
