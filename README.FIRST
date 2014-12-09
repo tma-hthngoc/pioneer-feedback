@@ -1,0 +1,5 @@
+Deploymennt: before deploy to production, remember run below commands to precompile assets:
+
+	RAILS_ENV=production bundle exec rake assets:precompile
+	rake ckeditor
+
