@@ -24,7 +24,7 @@ class FeedbacksController < ApplicationController
         # dathi - Send email
         begin
           UserMailer.feedback(params[:feedback])
-          flash[:success] = 'Message Sent! Many thanks, all feedback is valuable to us!'
+          flash[:success] = "Message Sent! Many thanks, all feedback is valuable to us!"
         rescue => ex
           puts ex
           flash[:error] = "There is some error. Sorry for this inconvenience."

@@ -23,10 +23,22 @@ a {
   &:visited {
     color: #666;
   }
-//  &:hover {
-//    color: #fff;
-//    background-color: #000;
-//  }
+  //  &:hover {
+  //    color: #fff;
+  //    background-color: #000;
+  //  }
+}
+
+span {
+  a {
+    color: #000;
+    &:visited {
+      color: green;
+    }
+    &:hover {
+      color: rgb(108, 159, 29);
+    }
+  }
 }
 
 div {

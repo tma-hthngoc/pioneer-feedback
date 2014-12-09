@@ -1,6 +1,6 @@
 class UserMailer < ActionMailer::Base
-  default from: 'feedback@wallem.com',
-          to: 'dathi@tma.com.vn'
+  default from: 'pioneer.feedback@gmail.com',
+          to: 'pioneer@wallem.com'
 
   def feedback(fb)
     ActionMailer::Base.smtp_settings = {
@@ -8,8 +8,8 @@ class UserMailer < ActionMailer::Base
         :port => 587,
         :domain => 'gmail.com',
         :authentication => :plain,
-        :user_name => "wallemtmatest@gmail.com",
-        :password => "12345678@X",
+        :user_name => 'pioneer.feedback@gmail.com',
+        :password => '12345678@X',
         :enable_starttls_auto => 1,
         :openssl_verify_mode => 'none'
     }

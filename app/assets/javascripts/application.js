@@ -19,5 +19,6 @@
 $(document).ready(function () {
     if ($(".alert-success").length > 0) {
         $("#new_feedback").html('');
+        $("#renew_feedback").show();
     }
 });

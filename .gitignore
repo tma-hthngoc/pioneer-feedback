@@ -17,3 +17,4 @@
 .idea/
 Gemfile.lock
 public/assets
+.DS_Store/
