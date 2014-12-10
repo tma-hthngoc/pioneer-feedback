@@ -1,7 +1,7 @@
 class UserMailer < ActionMailer::Base
   default from: 'pioneer.feedback@gmail.com',
-          #to: 'pioneer@wallem.com' # production
-	  to: 'dathi@tma.com.vn' # develop
+          to: 'pioneer@wallem.com' # production
+          #to: 'dathi@tma.com.vn' # develop
 
   def feedback(fb)
     ActionMailer::Base.smtp_settings = {

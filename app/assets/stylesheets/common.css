@@ -1,4 +1,4 @@
-html,body {
+html, body {
     font: 10pt Verdana, Geneva, sans-serif !important;
     margin: 0;
     padding: 0;
@@ -6,51 +6,67 @@ html,body {
 
 }
 
-.bluetextbold{color:#4e5b9f;font-weight:bold;}
-.bluetext{color:#4e5b9f;}
+.bluetextbold {
+    color: #4e5b9f;
+    font-weight: bold;
+}
 
+.bluetext {
+    color: #4e5b9f;
+}
 
-p, h1, form, button{border:0; margin:0; padding:0;}
-.spacer{clear:both; height:1px;}
+p, h1, form, button {
+    border: 0;
+    margin: 0;
+    padding: 0;
+}
+
+.spacer {
+    clear: both;
+    height: 1px;
+}
 
 .pgstyle {
-  border:solid 2px #b7ddf2;
-  background:#ebf4fb;
-  font-size:11px;
-  color:#666666;
+    border: solid 2px #b7ddf2;
+    background: #ebf4fb;
+    font-size: 11px;
+    color: #666666;
 }
 
 h1 {
-    font-size:14px;
-    font-weight:bold;
-    margin-bottom:8px;
+    font-size: 14px;
+    font-weight: bold;
+    margin-bottom: 8px;
 }
+
 h2 {
-    font-size:12px;
-    font-weight:bold;
-    margin-bottom:8px;
+    font-size: 12px;
+    font-weight: bold;
+    margin-bottom: 8px;
 }
 
-  p {
-    font-size:11px;
-    margin-bottom:5px;
-    color:#666666;
-  }
-  .contained {
-    margin-bottom:5px;
-    border-bottom:solid 1px #b7ddf2;
-    padding-bottom:10px;
-  }
-  input {
-    font-size:12px;
-    padding:2px 2px;
-    border:solid 1px #aacfe4;
-    margin:2px 1px;
-  }
-  #message {
-    width: 90%;
-  }
+p {
+    font-size: 11px;
+    margin-bottom: 5px;
+    color: #666666;
+}
 
+.contained {
+    margin-bottom: 5px;
+    border-bottom: solid 1px #b7ddf2;
+    padding-bottom: 10px;
+}
+
+input {
+    font-size: 12px;
+    padding: 2px 2px;
+    border: solid 1px #aacfe4;
+    margin: 2px 1px;
+}
+
+#message {
+    width: 90%;
+}
 
 #col1, #col2, #col3 {
     float: left;
@@ -62,11 +78,11 @@ h2 {
 }
 
 .clearfix:after {
-   content: " "; /* Older browser do not support empty content */
-   visibility: hidden;
-   display: block;
-   height: 0;
-   clear: both;
+    content: " "; /* Older browser do not support empty content */
+    visibility: hidden;
+    display: block;
+    height: 0;
+    clear: both;
 }
 
 .field p {
@@ -83,17 +99,18 @@ h2 {
     text-align: center;
 }
 
-    #innovate {
-        border: 0 none !important;
-        display: block;
-        padding-top: 10px;
-    }
-    #innovate img {
-        height:50px;
-    }
+#innovate {
+    border: 0 none !important;
+    display: block;
+    padding-top: 10px;
+}
+
+#innovate img {
+    height: 50px;
+}
 
 .showme {
-    border:solid 1px #aacfe4;
+    border: solid 1px #aacfe4;
     width: 700px;
     padding-left: 10px;
     display: inline-block;
@@ -103,7 +120,7 @@ h2 {
     display: none;
 }
 
-.showme>p {
+.showme > p {
     font-size: 14px;
     margin: 4px;
 }

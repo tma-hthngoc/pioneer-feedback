@@ -118,3 +118,18 @@ input:focus, textarea:focus {
     line-height: normal;
   }
 }
+
+.notice-message {
+  display: none;
+  p {
+    text-align: left;
+    color: #666666;
+  }
+}
+
+select {
+  border: 1px solid #a4a4a4;
+  height: 33px;
+  width: 200px;
+  font-size: 14px;
+}

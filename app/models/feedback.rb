@@ -9,12 +9,14 @@ class Feedback
   validates_format_of :from, :with => /(?>(?:[0-9a-zA-Z][-\w]*[0-9a-zA-Z]\.)+)[a-zA-Z]{2,9}/,
                       :allow_blank => true,
                       :message => 'should be an email address'
-  validates_length_of :msg, :maximum => 1500
+  #validates_length_of :msg, :maximum => 150000
+
+  SUBJECT_TYPES = ['Concern', 'Suggestion', 'Ideas for improvement', 'General comment']
 
   HUMANIZED_ATTRIBUTES = {
       :from => "'Send a copy to me' field",
       :subject => "'Subject' field",
-      :msg => "Feedback's content"
+      :msg => "'Message' field"
   }
 
   def self.human_attribute_name(attr, options={})
